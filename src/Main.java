@@ -4,5 +4,12 @@ public class Main {
         Coordinate japan = new Grid("PM97lg").getCoordinate();
 
         System.out.println(Coordinate.distance(beijing, japan));
+
+        Coordinate pos = new Coordinate(new Position(39.0, 52.0, 20.0), new Position(116.0, 30.0, 8.0));
+        System.out.println(new Grid(pos));
+
+        System.out.println(new Grid("OM89aa"));
+        System.out.println(new Grid("OM89ab"));
+        System.out.println(new Grid("OM89ac"));
     }
 }

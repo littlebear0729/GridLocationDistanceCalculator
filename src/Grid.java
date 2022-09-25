@@ -27,7 +27,7 @@ public class Grid {
         this.LatSquare = LatDegree2Square(Lat.getDegree());
         this.LonSquare = LonDegree2Square(Lon.getDegree());
 
-        this.LatSubSquare = LatMinute2SubSquare(Lat.getMinute());
+        this.LatSubSquare = LatMinute2SubSquare(Lat.getMinute(), Lat.getSecond());
         this.LonSubSquare = LonMinute2SubSquare(Lon.getMinute());
     }
 
@@ -45,7 +45,7 @@ public class Grid {
         if (grid.length() == 6) {
             this.LonSubSquare = grid.substring(4, 5);
             this.LatSubSquare = grid.substring(5, 6);
-            this.Lat = new Position(LatField2Degree(LatField) + LatSquare2Degree(LatSquare), LatSubSquare2Minute(LatSubSquare), 0.0);
+            this.Lat = new Position(LatField2Degree(LatField) + LatSquare2Degree(LatSquare), LatSubSquare2Minute(LatSubSquare), LatSubSquare2Second(LatSubSquare));
             this.Lon = new Position(LonField2Degree(LonField) + LonSquare2Degree(LonSquare), LonSubSquare2Minute(LonSubSquare), 0.0);
         }
 
@@ -77,8 +77,8 @@ public class Grid {
         return String.valueOf(numbers[latSquare]);
     }
 
-    public String LatMinute2SubSquare(Double latMinute) {
-        int latSubSquare = (int) (latMinute / 2.5);
+    public String LatMinute2SubSquare(Double latMinute, Double latSecond) {
+        int latSubSquare = (int) ((latMinute + (latSecond / 60)) / 2.5);
         return String.valueOf(words[latSubSquare]).toLowerCase();
     }
 
@@ -110,6 +110,12 @@ public class Grid {
     public Double LatSubSquare2Minute(String latSubSquare) {
         int latSubSquareIndex = Arrays.binarySearch(words, latSubSquare.toUpperCase().charAt(0));
         return (double) latSubSquareIndex * 2.5;
+    }
+
+    public Double LatSubSquare2Second(String latSubSquare) {
+        int latSubSquareIndex = Arrays.binarySearch(words, latSubSquare.toUpperCase().charAt(0));
+        double r = latSubSquareIndex * 2.5;
+        return (r - (int) r) * 60;
     }
 
     public Double LonSubSquare2Minute(String lonSubSquare) {
