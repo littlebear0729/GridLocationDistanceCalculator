@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CoordinateConverter:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/CoordinateConverter_jar</output-path>
+    <root id="archive" name="CoordinateConverter.jar">
+      <element id="module-output" name="CoordinateConverter" />
+    </root>
+  </artifact>
+</component>

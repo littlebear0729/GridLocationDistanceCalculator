@@ -1,0 +1,59 @@
+JFDML JFormDesigner: "7.0.7.1.1184" Java: "17.0.4" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:24:p, par l {seq {comp label7:::p::p, space :::p, comp distanceLbl:::p::p, space :::x, comp calBtn:::p::p}, seq {par l {comp label1::l:p::p, comp label2::l:p::p}, space :::p, par c {comp gridLoc2::c:p:100:p, comp gridLoc1::c:p:100:p}, space s:::p, par l {comp label3:::p::p, comp label5:::p::p}, space :::p, par l {comp coodLoc1::l:p::p, comp coodLoc2::l:p::p}}}, space :p:24:p}}"
+			"$verticalGroup": "par l {seq l {space :p:34:p, par b {comp label1::b:p::p, comp gridLoc1::b:p::p, comp label3::b:p::p, comp coodLoc1::b:p::p}, space s:::p, par b {comp label2::b:p::p, comp gridLoc2::b:p::p, comp label5::b:p::p, comp coodLoc2::b:p::p}, space s:::p, par b {comp label7::b:p::p, comp distanceLbl::b:p::p, comp calBtn::b:p::p}, space ::25:x}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Grid Location 1:"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Grid Location 2:"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "gridLoc1"
+				"text": "OM89fv"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "gridLoc2"
+				"text": "PM97lg"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Coordinate 1:"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "coodLoc1"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "Coordinate 2:"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "coodLoc2"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": "Distance between two location:"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "distanceLbl"
+				"text": "0km"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "calBtn"
+				"text": "Calculate"
+				addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "calBtnMouseClicked", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 530, 210 )
+		} )
+	}
+}
