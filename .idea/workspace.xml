@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="CoordinateConverter:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b1550914-120d-40a3-961a-2535212f8939" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CoordinateConverter.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Coordinate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Grid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Position.java" afterDir="false" />
+    <list default="true" id="b1550914-120d-40a3-961a-2535212f8939" name="Changes" comment="Fix bug: negative Lat and Lon is now working&#10;&#10;Thanks to Open-Source Project: Look4Sat&#10;&#10;Add test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GridLocationDistanceCalculator.jar" beforeDir="false" afterPath="$PROJECT_DIR$/GridLocationDistanceCalculator.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Grid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Grid.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,28 +30,40 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2FF2uZy640Hr2EXgpYTYY1XGPJc" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-18&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/littlebear/IdeaProjects/GridLocationDistanceCalculator&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Coordinate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Coordinate" />
-      <module name="CoordinateConverter" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Grid" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Grid" />
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.MainFrm">
+    <configuration name="Location" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Location" />
       <module name="CoordinateConverter" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -66,19 +76,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Position" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Position" />
+    <configuration name="MainFrm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainFrm" />
       <module name="CoordinateConverter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GridTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CoordinateConverter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GridTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PointTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CoordinateConverter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PointTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.MainFrm" />
+        <item itemvalue="JUnit.GridTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Coordinate" />
-        <item itemvalue="Application.Grid" />
-        <item itemvalue="Application.Position" />
+        <item itemvalue="Application.Location" />
+        <item itemvalue="JUnit.PointTest" />
       </list>
     </recent_temporary>
   </component>
@@ -91,8 +120,47 @@
       <option name="presentableId" value="Default" />
       <updated>1664073734973</updated>
       <workItem from="1664073737267" duration="2656000" />
-      <workItem from="1664077890452" duration="4392000" />
+      <workItem from="1664077890452" duration="4713000" />
+      <workItem from="1664086343915" duration="817000" />
+      <workItem from="1664088653862" duration="1561000" />
+      <workItem from="1664093106889" duration="19000" />
+      <workItem from="1664171148542" duration="700000" />
+      <workItem from="1664171999683" duration="1567000" />
+      <workItem from="1664176883680" duration="41000" />
+      <workItem from="1664676879916" duration="1000000" />
+      <workItem from="1664679833665" duration="1101000" />
+      <workItem from="1664681097916" duration="1352000" />
+      <workItem from="1665986244183" duration="3404000" />
     </task>
+    <task id="LOCAL-00001" summary="Init&#10;&#10;Seems bug if Lon or Lat &lt; 0??">
+      <created>1664086031337</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1664086031337</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fix bug: Lat &lt;==&gt; Grid mistake">
+      <created>1664089618652</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1664089618652</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Init release">
+      <created>1664173529096</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1664173529096</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fix bug: negative Lat and Lon is now working&#10;&#10;Thanks to Open-Source Project: Look4Sat&#10;&#10;Add test">
+      <created>1665989445306</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665989445306</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,5 +176,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Init&#10;&#10;Seems bug if Lon or Lat &lt; 0??" />
+    <MESSAGE value="Fix bug: Lat &lt;==&gt; Grid mistake" />
+    <MESSAGE value="Init release" />
+    <MESSAGE value="Fix bug: negative Lat and Lon is now working&#10;&#10;Thanks to Open-Source Project: Look4Sat&#10;&#10;Add test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix bug: negative Lat and Lon is now working&#10;&#10;Thanks to Open-Source Project: Look4Sat&#10;&#10;Add test" />
   </component>
 </project>

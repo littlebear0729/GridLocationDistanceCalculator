@@ -1,20 +1,26 @@
-public class Position {
+public class Point {
 
     private Double degree;
     private Double minute;
     private Double second;
 
-    public Position(Double degree, Double minute, Double second) {
+    public Point(Double degree, Double minute, Double second) {
         this.degree = degree;
         this.minute = minute;
         this.second = second;
     }
 
-    public Position(Double decimal) {
-        this.degree = Math.floor(decimal);
-        this.minute = Math.floor((decimal - this.degree) * 60);
-        this.second = (decimal - this.degree - this.minute / 60) * 3600;
-    }
+//    public Point(Double decimal) {
+//        if (decimal >= 0) {
+//            this.degree = Math.floor(decimal);
+//            this.minute = Math.floor((decimal - this.degree) * 60);
+//            this.second = (decimal - this.degree - this.minute / 60) * 3600;
+//        } else {
+//            this.degree = Math.ceil(decimal);
+//            this.minute = Math.ceil((decimal - this.degree) * 60);
+//            this.second = (decimal - this.degree - this.minute / 60) * 3600;
+//        }
+//    }
 
     public Double toDecimal() {
         Double result = this.degree;
@@ -52,11 +58,9 @@ public class Position {
     }
 
     public static void main(String[] args) {
-        Position p = new Position(116.0, 45.0, 30.822);
+        Point p = new Point(116.0, 45.0, 30.822);
         System.out.println(p);
         Double result = p.toDecimal();
         System.out.println(result);
-        p = new Position(40.041895);
-        System.out.println(p);
     }
 }

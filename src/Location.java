@@ -1,26 +1,26 @@
-public class Coordinate {
+public class Location {
 
-    private Position lat;
-    private Position lon;
+    private Point lat;
+    private Point lon;
 
-    public Coordinate(Position lat, Position lon) {
+    public Location(Point lat, Point lon) {
         this.lat = lat;
         this.lon = lon;
     }
 
-    public Position getLat() {
+    public Point getLat() {
         return lat;
     }
 
-    public void setLat(Position lat) {
+    public void setLat(Point lat) {
         this.lat = lat;
     }
 
-    public Position getLon() {
+    public Point getLon() {
         return lon;
     }
 
-    public void setLon(Position lon) {
+    public void setLon(Point lon) {
         this.lon = lon;
     }
 
@@ -30,7 +30,7 @@ public class Coordinate {
                 ", Longitude: " + lon;
     }
 
-    public static double distance(Coordinate c1, Coordinate c2) {
+    public static double distance(Location c1, Location c2) {
 
         final int R = 6371; // Radius of the earth
 
@@ -51,15 +51,15 @@ public class Coordinate {
     }
 
     public static void main(String[] args) {
-        Position bj_lat = new Position(39.873322);
-        Position bj_lon = new Position(116.472786);
+        Point bj_lat = new Point(39.0, 0.0, 0.0);
+        Point bj_lon = new Point(116.0, 30.0, 30.0);
 
-        Coordinate bj = new Coordinate(bj_lat, bj_lon);
+        Location bj = new Location(bj_lat, bj_lon);
         System.out.println(bj);
 
-        Position bj_lat_2 = new Position(40.073322);
-        Position bj_lon_2 = new Position(116.482786);
-        Coordinate bj_2 = new Coordinate(bj_lat_2, bj_lon_2);
+        Point bj_lat_2 = new Point(40.0, 30.0, 0.0);
+        Point bj_lon_2 = new Point(116.0, 0.0, 0.0);
+        Location bj_2 = new Location(bj_lat_2, bj_lon_2);
 
         System.out.println(distance(bj, bj_2));
     }

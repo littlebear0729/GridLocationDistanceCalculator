@@ -28,11 +28,11 @@ public class MainFrm extends JFrame {
         try {
             String loc1 = gridLoc1.getText(), loc2 = gridLoc2.getText();
             Grid grid1 = new Grid(loc1), grid2 = new Grid(loc2);
-            Coordinate coordinate1 = grid1.getCoordinate(), coordinate2 = grid2.getCoordinate();
+            Location location1 = grid1.getCoordinate(), location2 = grid2.getCoordinate();
             String pos = "Lat: %.06f, Lon: %.06f";
-            coodLoc1.setText(String.format(pos, coordinate1.getLat().toDecimal(), coordinate1.getLon().toDecimal()));
-            coodLoc2.setText(String.format(pos, coordinate2.getLat().toDecimal(), coordinate2.getLon().toDecimal()));
-            double distance = Coordinate.distance(coordinate1, coordinate2);
+            coodLoc1.setText(String.format(pos, location1.getLat().toDecimal(), location1.getLon().toDecimal()));
+            coodLoc2.setText(String.format(pos, location2.getLat().toDecimal(), location2.getLon().toDecimal()));
+            double distance = Location.distance(location1, location2);
             distanceLbl.setText(String.format("%.03f km", distance));
         } catch (Exception error) {
             error.printStackTrace();
